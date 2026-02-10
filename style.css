@@ -130,36 +130,45 @@ button:hover {
 }
 
 /* ===== VIDEO PAGE ===== */
+
+  
+/* ===== VIDEO SECTION ===== */
 .video-box {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
   margin-top: 25px;
+  align-items: center;
 }
 
+/* Frame */
 .video-frame {
-  background: linear-gradient(180deg, #fff0f5, #ffffff);
-  padding: 12px;
-  border-radius: 30px;
-  border: 7px solid #ffe4ec;
+  width: 100%;
+  max-width: 440px;
+
+  background: linear-gradient(135deg, #fff0f5, #ffffff);
+  padding: 14px;
+  border-radius: 35px;
+  border: 3px dashed #ffb6c1;
 
   box-shadow:
-    0 15px 35px rgba(255,105,135,0.45),
-    inset 0 0 15px rgba(255,182,193,0.6);
+    0 20px 40px rgba(255,105,135,0.35),
+    inset 0 0 20px rgba(255,182,193,0.6);
 
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-sizing: border-box;   /* 🔥 VERY IMPORTANT */
+  overflow: hidden;         /* 🔥 PREVENTS CUTTING */
 }
 
-.video-frame:hover {
-  transform: scale(1.04);
-}
-
+/* Video itself */
 .video-frame video {
+  display: block;
   width: 100%;
-  max-width: 420px;
-  height: 230px;
-  object-fit: contain; /* NO CUTTING */
+  height: auto;             /* 🔥 NO FORCED HEIGHT */
+  max-height: 240px;
+
+  object-fit: contain;      /* 🔥 NEVER CROP */
   background: black;
+
   border-radius: 22px;
 }
 
@@ -247,3 +256,4 @@ button:hover {
     opacity: 0;
   }
 }
+
