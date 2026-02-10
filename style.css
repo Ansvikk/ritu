@@ -256,4 +256,108 @@ button:hover {
     opacity: 0;
   }
 }
+/* ============================= */
+/* ===== MOBILE FIRST FIX ===== */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  body {
+    align-items: flex-start;
+    padding: 15px 0;
+  }
+
+  /* Main container */
+  .container {
+    width: 92%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Buttons */
+  .btn,
+  button {
+    padding: 10px 22px;
+    font-size: 14px;
+    border-radius: 25px;
+  }
+
+  /* Password input */
+  input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Photo galleries */
+  .photo-row,
+  .yes-photos {
+    gap: 12px;
+  }
+
+  .photo-row img,
+  .yes-photos img {
+    width: 105px;
+    height: auto;
+    padding: 5px;
+    border-width: 4px;
+  }
+
+  /* Video section */
+  .video-box {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .video-frame {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    border-radius: 22px;
+    border-width: 2px;
+  }
+
+  .video-frame video {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 16px;
+  }
+
+  /* Valentine buttons */
+  .buttons {
+    margin-top: 15px;
+  }
+
+  #noBtn {
+    position: relative;   /* avoid weird jumps on mobile */
+    margin-left: 10px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 400px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .photo-row img,
+  .yes-photos img {
+    width: 95px;
+  }
+}
+
+
 
