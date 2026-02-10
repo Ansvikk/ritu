@@ -138,4 +138,112 @@ button:hover {
 }
 
 .video-frame {
-  background: linear-gradient(180deg, #fff0f5, #
+  background: linear-gradient(180deg, #fff0f5, #ffffff);
+  padding: 12px;
+  border-radius: 30px;
+  border: 7px solid #ffe4ec;
+
+  box-shadow:
+    0 15px 35px rgba(255,105,135,0.45),
+    inset 0 0 15px rgba(255,182,193,0.6);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-frame:hover {
+  transform: scale(1.04);
+}
+
+.video-frame video {
+  width: 100%;
+  max-width: 420px;
+  height: 230px;
+  object-fit: contain; /* NO CUTTING */
+  background: black;
+  border-radius: 22px;
+}
+
+/* ===== VALENTINE PAGE ===== */
+.buttons {
+  position: relative;
+  margin-top: 20px;
+}
+
+#noBtn {
+  position: absolute;
+}
+
+/* ===== YES PHOTOS (HIDDEN INITIALLY) ===== */
+.yes-photos {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.yes-photos.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.yes-photos img {
+  width: 120px;
+  height: 160px;
+  object-fit: contain;
+  background: white;
+
+  border-radius: 18px;
+  border: 6px solid #ffe4ec;
+  padding: 6px;
+
+  box-shadow:
+    0 8px 20px rgba(255,105,135,0.4),
+    inset 0 0 10px rgba(255,182,193,0.6);
+
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.yes-photos.show img {
+  animation: photoPop 0.8s ease forwards;
+}
+
+.yes-photos.show img:nth-child(1) { animation-delay: 0.2s; }
+.yes-photos.show img:nth-child(2) { animation-delay: 0.4s; }
+.yes-photos.show img:nth-child(3) { animation-delay: 0.6s; }
+.yes-photos.show img:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes photoPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== HEART RAIN ===== */
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 22px;
+  animation: fall linear forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
