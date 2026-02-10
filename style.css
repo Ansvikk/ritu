@@ -53,7 +53,6 @@ input {
   width: 80%;
 }
 
-
 /* ===== SHOW PASSWORD ===== */
 .show-pass {
   margin-top: 12px;
@@ -61,26 +60,18 @@ input {
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   font-size: 14px;
   color: #ff4b5c;
   cursor: pointer;
   user-select: none;
 }
 
-/* Checkbox styling */
 .show-pass input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  accent-color: #ff4b5c;   /* modern browsers */
+  accent-color: #ff4b5c;
   cursor: pointer;
 }
-
-/* Hover effect */
-.show-pass:hover {
-  color: #ff1e38;
-}
-
 
 /* ===== BUTTONS ===== */
 .btn,
@@ -142,112 +133,9 @@ button:hover {
 .video-box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.video-box video {
-  width: 100%;
-  max-width: 400px;
-  height: 220px;
-  object-fit: cover;
-
-  border-radius: 25px;
-  border: 7px solid #ffe4ec;
-  padding: 8px;
-  background: white;
-
-  box-shadow:
-    0 12px 30px rgba(255,105,135,0.5),
-    inset 0 0 15px rgba(255,182,193,0.6);
-}
-
-/* ===== VALENTINE PAGE ===== */
-.buttons {
-  position: relative;
-  margin-top: 20px;
-}
-
-#noBtn {
-  position: absolute;
-}
-
-/* ===== YES PHOTOS (HIDDEN INITIALLY) ===== */
-.yes-photos {
+  gap: 25px;
   margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-
-  opacity: 0;
-  visibility: hidden;
 }
 
-/* Visible after YES */
-.yes-photos.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* YES PHOTOS STYLE */
-.yes-photos img {
-  width: 120px;
-  height: 160px;
-  object-fit: contain;
-  background: white;
-
-  border-radius: 18px;
-  border: 6px solid #ffe4ec;
-  padding: 6px;
-
-  box-shadow:
-    0 8px 20px rgba(255,105,135,0.4),
-    inset 0 0 10px rgba(255,182,193,0.6);
-
-  opacity: 0;
-  transform: scale(0.5);
-}
-
-/* Animate ONLY after YES */
-.yes-photos.show img {
-  animation: photoPop 0.8s ease forwards;
-}
-
-/* Stagger animation */
-.yes-photos.show img:nth-child(1) { animation-delay: 0.2s; }
-.yes-photos.show img:nth-child(2) { animation-delay: 0.4s; }
-.yes-photos.show img:nth-child(3) { animation-delay: 0.6s; }
-.yes-photos.show img:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes photoPop {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) translateY(30px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ===== HEART RAIN ===== */
-.heart {
-  position: fixed;
-  top: -10px;
-  font-size: 22px;
-  animation: fall linear forwards;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-    opacity: 0;
-  }
-}
+.video-frame {
+  background: linear-gradient(180deg, #fff0f5, #
